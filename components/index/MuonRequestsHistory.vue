@@ -53,7 +53,7 @@ import { Chart } from 'highcharts-vue'
 
 export default {
   name: 'MuonRequestsHistory',
-  comments: { Chart },
+  components: { highcharts: Chart },
   data() {
     return {
       whichActive: 1,

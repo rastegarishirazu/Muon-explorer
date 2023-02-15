@@ -65,8 +65,13 @@ export default {
       themes: {
         light: {
           primary: '#5158F6',
+          primaryLight: '#A5A9F8',
+          primaryLow: '#CFD1F9',
           gray: '#313144',
-          gray2: '#F2F2F4',
+          gray1: '#323245',
+          gray2: '#313144',
+          gray5: '#58586D',
+          gray8: '#A9A9B9',
           white: '#F9F9FA',
         },
         dark: {

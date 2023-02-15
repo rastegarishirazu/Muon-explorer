@@ -1,23 +1,30 @@
 <template>
-  <v-app dark class="image_background">
-    <v-row class="mt-2 px-2 row_top" justify="space-between">
+  <v-app class="all_bg">
+    <v-row class="mt-2 px-8 row_top" justify="space-between">
       <v-col md="4">
         <v-img
           class="logo"
           max-width="37"
           max-height="32"
-          src="/defultLayout/logo.png"
+          src="/defultLayout/logo.svg"
         ></v-img>
-        <h1 class="logo_type mt-1 ml-12 white--text">MUON Explorer</h1>
+        <h1 class="logo_type ml-12 primary--text">
+          MUON <br />
+          Explorer
+        </h1>
       </v-col>
-      <v-col md="5" class="text-right">
-        <v-btn text class="navigation_btn px-2">Home</v-btn>
+      <v-col md="5" class="text-right white--text">
+        <v-btn text class="navigation_btn gray2--text px-2">Home</v-btn>
         <v-btn text class="navigation_btn px-2">Applications</v-btn>
         <v-btn text class="navigation_btn px-2">Requests</v-btn>
         <v-btn text class="navigation_btn px-2">Nodes</v-btn>
-        <v-btn dark icon class="navigation_btn px-2"
-          ><v-img max-width="40" src="/defultLayout/menuIcon.png"></v-img
-        ></v-btn>
+        <v-btn
+          icon
+          elevation="0"
+          class="navigation_btn rounded-lg primaryLow px-2"
+        >
+          <v-icon color="primaryLight">mdi-menu</v-icon>
+        </v-btn>
       </v-col>
     </v-row>
     <v-row justify="center">
@@ -25,35 +32,46 @@
         <Nuxt />
       </v-col>
     </v-row>
-    <v-footer color="gray">
-      <v-row class="pa-2 mb-0" justify="space-between">
-        <v-col md="2">
+    <v-footer padless color="all_bg ">
+      <v-row class="pa-2 mb-0">
+        <v-col offset="5" md="2" class="" align-self="center">
           <v-img
             class="logo"
             max-width="24"
             max-height="24"
-            src="/defultLayout/logo.png"
+            src="/defultLayout/logo.svg"
           ></v-img>
-          <span color="#F2F2F4" class="ml-2 gray2--text">By</span
-          ><a class="ml-1 white--text" href="">Muon.Net</a>
+          <span color="#F2F2F4" class="gray2--text ml-2">By</span
+          ><a
+            class="ml-1 gray1--text text-decoration-none font-weight-bold"
+            href=""
+            >Muon.Net</a
+          >
         </v-col>
-        <v-col md="3" class="text-right">
-          <v-btn icon dark class="mx-2">
+        <v-col md="5" class="text-right">
+          <v-btn icon dark class="mx-4">
             <v-img
               width="34"
               height="27.5"
-              src="/defultLayout/ic_discord.png"
+              src="/defultLayout/ic_discord.svg"
             ></v-img>
           </v-btn>
-          <v-btn icon dark class="mx-2">
-            <v-icon class="text-h4">mdi-twitter</v-icon>
+          <v-btn icon dark class="mx-4">
+            <v-img
+              width="34"
+              height="27.5"
+              src="/defultLayout/ic_twitter.svg"
+            ></v-img>
           </v-btn>
-          <v-btn icon dark class="mx-2">
+          <v-btn icon dark class="mx-4">
             <v-img
               width="36"
               height="36"
-              src="/defultLayout/ic_telegram.png"
+              src="/defultLayout/ic_telegram.svg"
             ></v-img>
+          </v-btn>
+          <v-btn icon class="mx-4">
+            <v-img src="/defultLayout/ic_other.svg"></v-img>
           </v-btn>
         </v-col>
       </v-row>
@@ -102,11 +120,10 @@ export default {
   float: left;
 }
 .logo_type {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 14px;
+  line-height: 15px;
 }
 .navigation_btn {
   font-family: 'Lato';
@@ -114,10 +131,11 @@ export default {
   font-weight: 600;
   font-size: 12px;
   line-height: 19px;
-
-  color: #f9f9fa;
 }
 .row_top {
   flex: 0 !important;
+}
+.all_bg {
+  background: #eff0f5;
 }
 </style>
